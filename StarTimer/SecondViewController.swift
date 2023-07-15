@@ -20,7 +20,16 @@ class SecondViewController: UIViewController {
         label.text = String(time)
     }
     
-
+    @IBAction func startTimer(_ sender: Any) {
+        
+    }
+    @IBAction func pauseTimer(_ sender: Any) {
+        
+    }
+    @IBAction func restartTimer(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

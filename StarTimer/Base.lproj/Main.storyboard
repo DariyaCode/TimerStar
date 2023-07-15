@@ -59,21 +59,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EpQ-Es-gXk">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-Dl-6aq">
+                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="" image="restart.circle.fill" catalog="system" id="lag-eU-ALG"/>
-                                    <tabBarItem title="" image="pause.circle.fill" catalog="system" id="Sdu-Nq-QI8"/>
+                                    <barButtonItem image="restart.circle.fill" catalog="system" id="HOm-ow-YnV">
+                                        <connections>
+                                            <action selector="restartTimer:" destination="n0X-Ts-dZR" id="IIo-2L-YFl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oMc-50-2EX"/>
+                                    <barButtonItem image="pause.circle.fill" catalog="system" id="ivb-zg-euV">
+                                        <connections>
+                                            <action selector="pauseTimer:" destination="n0X-Ts-dZR" id="ipG-cq-Afy"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </tabBar>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ul7-MH-dG7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rpi-XP-hpw">
-                        <barButtonItem key="rightBarButtonItem" image="play.circle.fill" catalog="system" id="bv6-J7-NWZ"/>
+                        <barButtonItem key="rightBarButtonItem" image="play.circle.fill" catalog="system" id="bv6-J7-NWZ">
+                            <connections>
+                                <action selector="startTimer:" destination="n0X-Ts-dZR" id="7vF-Id-o8R"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="label" destination="1ly-gY-WG3" id="sf1-Eo-ada"/>
