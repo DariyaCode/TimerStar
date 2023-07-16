@@ -11,6 +11,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     var time = 0
+    var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,14 @@ class SecondViewController: UIViewController {
         label.text = String(time)
     }
     
-    @IBAction func startTimer(_ sender: Any) {
+    @objc func countTimer(){
+        time -= 1
         
+        label.text = String(time)
+    }
+    
+    @IBAction func startTimer(_ sender: Any) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countTimer), userInfo: nil, repeats: true)
     }
     @IBAction func pauseTimer(_ sender: Any) {
         
