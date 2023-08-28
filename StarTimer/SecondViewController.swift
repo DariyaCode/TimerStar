@@ -11,7 +11,10 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     var time = 0
+    
     var timer = Timer()
+    
+    var isTimerRunning = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,10 @@ class SecondViewController: UIViewController {
         time -= 1
         
         label.text = String(time)
+        
+        if time == 0{
+            timer.invalidate()
+        }
     }
     
     @IBAction func startTimer(_ sender: Any) {
