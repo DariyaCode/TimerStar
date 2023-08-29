@@ -64,6 +64,13 @@ class SecondViewController: UIViewController {
         label.text = String(time)
     }
     
+    func timeToString(intTime: Int) -> String{
+        let seconds = intTime % 60
+        let minutes = (intTime / 60) % 60
+        let hours = intTime / 3600
+        
+    }
+    
     /*
     // MARK: - Navigation
 
