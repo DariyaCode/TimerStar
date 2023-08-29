@@ -12,6 +12,8 @@ class SecondViewController: UIViewController {
     
     var time = 0
     
+    var startTime = 0
+    
     var timer = Timer()
     
     var isTimerRunning = false
@@ -29,19 +31,35 @@ class SecondViewController: UIViewController {
         
         label.text = String(time)
         
-        if time == 0{
+        startTime = time
+        
+        if time == 0 {
+            
             timer.invalidate()
+            //isTimerRunning = false
         }
     }
     
+    
     @IBAction func startTimer(_ sender: Any) {
+        
+        if isTimerRunning{
+            return
+        }
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countTimer), userInfo: nil, repeats: true)
+        
+        isTimerRunning = true
     }
+    
+    
     @IBAction func pauseTimer(_ sender: Any) {
         
     }
     @IBAction func restartTimer(_ sender: Any) {
-        
+        time = startTime
+        isTimerRunning = false
+        label.text = String(time)
     }
     
     /*
