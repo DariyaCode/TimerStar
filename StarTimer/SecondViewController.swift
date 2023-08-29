@@ -23,7 +23,7 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        label.text = String(time)
+        label.text = timeToString(intTime: time)
         
         startTime = time
     }
@@ -31,7 +31,7 @@ class SecondViewController: UIViewController {
     @objc func countTimer(){
         time -= 1
         
-        label.text = String(time)
+        label.text = timeToString(intTime: time)
         
         if time == 0 {
             
@@ -59,15 +59,18 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func restartTimer(_ sender: Any) {
+        timer.invalidate()
         time = startTime
         isTimerRunning = false
-        label.text = String(time)
+        label.text = timeToString(intTime: time)
     }
     
     func timeToString(intTime: Int) -> String{
         let seconds = intTime % 60
         let minutes = (intTime / 60) % 60
         let hours = intTime / 3600
+        
+        return String(format: "%0.2d:%0.2d:%0.2d", hours, minutes, seconds)
         
     }
     
