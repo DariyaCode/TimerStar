@@ -24,14 +24,14 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         label.text = String(time)
+        
+        startTime = time
     }
     
     @objc func countTimer(){
         time -= 1
         
         label.text = String(time)
-        
-        startTime = time
         
         if time == 0 {
             
@@ -54,8 +54,10 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func pauseTimer(_ sender: Any) {
-        
+        timer.invalidate()
+        isTimerRunning = false
     }
+    
     @IBAction func restartTimer(_ sender: Any) {
         time = startTime
         isTimerRunning = false
