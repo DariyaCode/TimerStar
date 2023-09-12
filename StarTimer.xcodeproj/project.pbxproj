@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199DAC302AA99D8C0085A674 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DAC2F2AA99D8C0085A674 /* TableViewController.swift */; };
+		199DAC322AA99DE10085A674 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DAC312AA99DE10085A674 /* Person.swift */; };
 		19AF0F6C2A4FDB7F00A14FE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF0F6B2A4FDB7F00A14FE2 /* AppDelegate.swift */; };
 		19AF0F6E2A4FDB7F00A14FE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF0F6D2A4FDB7F00A14FE2 /* SceneDelegate.swift */; };
 		19AF0F702A4FDB7F00A14FE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF0F6F2A4FDB7F00A14FE2 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		199DAC2F2AA99D8C0085A674 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		199DAC312AA99DE10085A674 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		19AF0F682A4FDB7F00A14FE2 /* StarTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AF0F6B2A4FDB7F00A14FE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19AF0F6D2A4FDB7F00A14FE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				19AF0F6B2A4FDB7F00A14FE2 /* AppDelegate.swift */,
 				19AF0F6D2A4FDB7F00A14FE2 /* SceneDelegate.swift */,
 				19AF0F6F2A4FDB7F00A14FE2 /* ViewController.swift */,
+				199DAC2F2AA99D8C0085A674 /* TableViewController.swift */,
+				199DAC312AA99DE10085A674 /* Person.swift */,
 				19AF0F712A4FDB7F00A14FE2 /* Main.storyboard */,
 				19AF0F772A4FDB8200A14FE2 /* Assets.xcassets */,
 				19AF0F792A4FDB8200A14FE2 /* LaunchScreen.storyboard */,
@@ -145,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19AF0F702A4FDB7F00A14FE2 /* ViewController.swift in Sources */,
+				199DAC302AA99D8C0085A674 /* TableViewController.swift in Sources */,
 				19AF0F762A4FDB7F00A14FE2 /* StarTimer.xcdatamodeld in Sources */,
 				19AF0F6C2A4FDB7F00A14FE2 /* AppDelegate.swift in Sources */,
+				199DAC322AA99DE10085A674 /* Person.swift in Sources */,
 				19AF0F832A4FE28100A14FE2 /* SecondViewController.swift in Sources */,
 				19AF0F6E2A4FDB7F00A14FE2 /* SceneDelegate.swift in Sources */,
 			);

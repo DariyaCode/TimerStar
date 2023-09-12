@@ -12,6 +12,9 @@ class SecondViewController: UIViewController {
     
     var time = 0
     
+    var secondTime = 3 % 60
+    //переменная отвечающая за то, что мы задаем секунды, с какой частотой будут создаваться новые ячейки в тейбл вью
+    
     var startTime = 0
     
     var timer = Timer()
@@ -23,7 +26,7 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        label.text = timeToString(intTime: time)
+        label.text = String(format: "%0.2d", secondTime)
         
         startTime = time
     }
@@ -31,14 +34,20 @@ class SecondViewController: UIViewController {
     @objc func countTimer(){
         time -= 1
         
-        label.text = timeToString(intTime: time)
+        label.text = String(format: "%0.2d", secondTime)
         
         if time == 0 {
             
             timer.invalidate()
-            //isTimerRunning = false
+            //таймер запустится снова:
+            time = startTime
+            isTimerRunning = false
+            label.text = timeToString(intTime: time)
         }
     }
+    
+   
+    
     
     
     @IBAction func startTimer(_ sender: Any) {
@@ -51,7 +60,6 @@ class SecondViewController: UIViewController {
         
         isTimerRunning = true
     }
-    
     
     @IBAction func pauseTimer(_ sender: Any) {
         timer.invalidate()
